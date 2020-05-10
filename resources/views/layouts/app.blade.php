@@ -6,7 +6,7 @@
     @livewireStyles
 </head>
 <body>
-@yield('content')
+@livewire('counter')
 @livewireScripts
 </body>
 </html>

@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::livewire('/livewire/{user}', 'counter');
+Route::get('/livewire', function() {
+    return view('layouts.app');
+});
