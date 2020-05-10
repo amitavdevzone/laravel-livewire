@@ -2,22 +2,22 @@
 
 namespace App\Http\Livewire;
 
+use App\User;
 use Livewire\Component;
 
 class Counter extends Component
 {
     public $count;
-    public $message;
+    public $name;
+    public $user;
 
     public function mount()
     {
-        $this->count = 0;
-    }
-
-    public function updated($name, $value)
-    {
-        logger($name);
-        logger($value);
+        $this->fill([
+            'count' => 0,
+            'name' => '',
+            'user' => null,
+        ]);
     }
 
     public function increment()
@@ -31,6 +31,13 @@ class Counter extends Component
             return;
         }
         $this->count--;
+    }
+
+    public function updatedName($value)
+    {
+        if (strlen($value) >= 3) {
+            $this->user = User::where('name', 'like', "{$this->name}%")->first();
+        }
     }
 
     public function render()
