@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('event_name');
             $table->string('contact_person');
-            $table->string('content_email');
+            $table->string('contact_email');
             $table->integer('allowed_participant');
             $table->integer('registered_participant')->default(0);
             $table->timestamps();

@@ -14,10 +14,17 @@ class EventAddForm extends Component
 
     public function submit()
     {
+        $this->validate([
+            'eventName' => ['required', 'min:3'],
+            'contactName' => ['required', 'min:3'],
+            'contactEmail' => ['required', 'email'],
+            'allowedParticipants' => ['required', 'numeric'],
+        ]);
+
         Event::create([
             'event_name' => $this->eventName,
             'contact_person' => $this->contactName,
-            'content_email' => $this->contactEmail,
+            'contact_email' => $this->contactEmail,
             'allowed_participant' => $this->allowedParticipants,
         ]);
 
