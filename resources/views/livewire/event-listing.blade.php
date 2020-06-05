@@ -20,7 +20,7 @@
                 <td>{{$event->contact_email}}</td>
                 <td>{{$event->allowed_participant}}</td>
                 <td>{{$event->registered_participant}}</td>
-                <td><a href="#">View</a></td>
+                <td><a href="{{route('event.view', ['event' => $event->id])}}">View</a></td>
             </tr>
         @endforeach
         </tbody>

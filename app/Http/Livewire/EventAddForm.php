@@ -11,6 +11,21 @@ class EventAddForm extends Component
     public $contactName;
     public $contactEmail;
     public $allowedParticipants;
+    public $event;
+
+    public function mount($event)
+    {
+        $this->event = null;
+
+        if ($event) {
+            $this->event = $event;
+
+            $this->eventName = $this->event->event_name;
+            $this->contactName = $this->event->contact_person;
+            $this->contactEmail = $this->event->contact_email;
+            $this->allowedParticipants = $this->event->allowed_participant;
+        }
+    }
 
     public function submit()
     {
@@ -21,12 +36,19 @@ class EventAddForm extends Component
             'allowedParticipants' => ['required', 'numeric'],
         ]);
 
-        Event::create([
+        $event = [
             'event_name' => $this->eventName,
             'contact_person' => $this->contactName,
             'contact_email' => $this->contactEmail,
             'allowed_participant' => $this->allowedParticipants,
-        ]);
+        ];
+
+        if ($this->event) {
+            Event::find($this->event->id)
+                ->update($event);
+        } else {
+            Event::create($event);
+        }
 
         return $this->redirectRoute('home');
     }

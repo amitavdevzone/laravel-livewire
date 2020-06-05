@@ -10,6 +10,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/event/add', [EventController::class, 'add'])->name('event.add');
+    Route::livewire('/event/view/{event}', 'event-view')->name('event.view');
 });
