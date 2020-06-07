@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Event;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class EventAddForm extends Component
@@ -47,6 +48,7 @@ class EventAddForm extends Component
             Event::find($this->event->id)
                 ->update($event);
         } else {
+            $event['identifier'] = Str::random(10);
             Event::create($event);
         }
 

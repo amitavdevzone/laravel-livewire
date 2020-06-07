@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9fbc0b21-17e2-43b0-8b8d-21018751aca7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EventAddForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EventAddForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_17_180854_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_17_180854_create_events_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/event-listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/event-listing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/event-add-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/event-add-page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +139,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -157,6 +160,8 @@
       <workItem from="1589737029588" duration="82000" />
       <workItem from="1589737129191" duration="2423000" />
       <workItem from="1590077974448" duration="1619000" />
+      <workItem from="1591498099410" duration="250000" />
+      <workItem from="1591498358383" duration="2349000" />
     </task>
     <servers />
   </component>
@@ -164,6 +169,22 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="768" y="300" width="424" height="520" key="FileChooserDialogImpl" timestamp="1591498336238">
+      <screen x="50" y="27" width="1870" height="1053" />
+    </state>
+    <state x="768" y="300" width="424" height="520" key="FileChooserDialogImpl/50.27.1870.1053@50.27.1870.1053" timestamp="1591498336238" />
+    <state x="839" y="487" width="281" height="139" key="Laravel.ExtractPartialViewDialog" timestamp="1591499560239">
+      <screen x="50" y="27" width="1870" height="1053" />
+    </state>
+    <state x="839" y="487" width="281" height="139" key="Laravel.ExtractPartialViewDialog/50.27.1870.1053@50.27.1870.1053" timestamp="1591499560239" />
+    <state x="780" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1591499078365">
+      <screen x="50" y="27" width="1870" height="1053" />
+    </state>
+    <state x="780" y="479" width="399" height="156" key="NewPhpFileDialog/50.27.1870.1053@50.27.1870.1053" timestamp="1591499078365" />
+    <state x="677" y="150" width="1022" height="737" key="SettingsEditor" timestamp="1591498416784">
+      <screen x="50" y="27" width="1870" height="1053" />
+    </state>
+    <state x="677" y="150" width="1022" height="737" key="SettingsEditor/50.27.1870.1053@50.27.1870.1053" timestamp="1591498416784" />
     <state width="553" height="446" key="SwitcherDM" timestamp="1590078531171">
       <screen x="58" y="27" width="1862" height="1053" />
     </state>

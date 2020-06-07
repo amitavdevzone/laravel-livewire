@@ -3,6 +3,7 @@
         <thead>
         <tr>
             <th>#</th>
+            <th>Identifier</th>
             <th>Event name</th>
             <th>Contact person</th>
             <th>Contact email</th>
@@ -15,6 +16,7 @@
         @foreach($events as $event)
             <tr>
                 <td>{{$event->id}}</td>
+                <td>{{$event->identifier}}</td>
                 <td>{{$event->event_name}}</td>
                 <td>{{$event->contact_person}}</td>
                 <td>{{$event->contact_email}}</td>
