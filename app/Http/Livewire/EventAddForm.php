@@ -6,6 +6,7 @@ use App\Models\Event;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Storage;
 
 class EventAddForm extends Component
 {
@@ -34,27 +35,34 @@ class EventAddForm extends Component
 
     public function submit()
     {
-        $this->validate([
+        $edit = $this->event ? true : false;
+
+        $rules = [
             'eventName' => ['required', 'min:3'],
             'contactName' => ['required', 'min:3'],
             'contactEmail' => ['required', 'email'],
             'allowedParticipants' => ['required', 'numeric'],
-            'banner' => ['required', 'file'],
-        ]);
+        ];
 
-        $filePath = $this->banner->store('public/banners');
+        if (!$edit) {
+            $rules['banner'] = ['required', 'file'];
+        }
+
+        $this->validate($rules);
 
         $event = [
             'event_name' => $this->eventName,
             'contact_person' => $this->contactName,
             'contact_email' => $this->contactEmail,
             'allowed_participant' => $this->allowedParticipants,
-            'banner' => $filePath,
         ];
 
-        if ($this->event) {
-            Event::find($this->event->id)
-                ->update($event);
+        if ($this->banner) {
+            $event['banner'] = $this->banner->store('public/banners');
+        }
+
+        if ($edit) {
+            $this->handleEventUpload($event);
         } else {
             $event['identifier'] = Str::random(10);
             Event::create($event);
@@ -66,5 +74,15 @@ class EventAddForm extends Component
     public function render()
     {
         return view('livewire.event-add-form');
+    }
+
+    private function handleEventUpload($event)
+    {
+        if ($event['banner']) {
+            Storage::delete($this->event->banner);
+        }
+
+        Event::find($this->event->id)
+            ->update($event);
     }
 }
