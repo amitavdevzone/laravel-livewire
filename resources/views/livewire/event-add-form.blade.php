@@ -39,6 +39,20 @@
                                 <div class="error">{{$message}}</div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="banner">Event banner</label>
+                                <input type="file" name="banner" id="banner"
+                                       class="form-control" wire:model="banner">
+                                @error('banner')
+                                <div class="error">{{$message}}</div>
+                                @enderror
+                                @if ($banner)
+                                    <img src="{{ $banner->temporaryUrl() }}" class="w-50 p-4">
+                                @endif
+                                @if (!$banner && isset($event->banner))
+                                    <img src="{{ Storage::url($event->banner) }}" class="w-50 p-4">
+                                @endif
+                            </div>
                             <button class="btn btn-success mr-4">Save</button>
                             <a href="{{route('home')}}">Back</a>
                         </form>

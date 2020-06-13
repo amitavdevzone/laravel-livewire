@@ -3,15 +3,19 @@
 namespace App\Http\Livewire;
 
 use App\Models\Event;
-use Illuminate\Support\Str;
 use Livewire\Component;
+use Illuminate\Support\Str;
+use Livewire\WithFileUploads;
 
 class EventAddForm extends Component
 {
+    use WithFileUploads;
+
     public $eventName;
     public $contactName;
     public $contactEmail;
     public $allowedParticipants;
+    public $banner;
     public $event;
 
     public function mount($event)
@@ -35,13 +39,17 @@ class EventAddForm extends Component
             'contactName' => ['required', 'min:3'],
             'contactEmail' => ['required', 'email'],
             'allowedParticipants' => ['required', 'numeric'],
+            'banner' => ['required', 'file'],
         ]);
+
+        $filePath = $this->banner->store('public/banners');
 
         $event = [
             'event_name' => $this->eventName,
             'contact_person' => $this->contactName,
             'contact_email' => $this->contactEmail,
             'allowed_participant' => $this->allowedParticipants,
+            'banner' => $filePath,
         ];
 
         if ($this->event) {
