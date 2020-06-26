@@ -53,6 +53,33 @@
                                     <img src="{{ Storage::url($event->banner) }}" class="w-50 p-4">
                                 @endif
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label for="downloads">Downloads</label>
+                                        @for($i = 0; $i < $fields; $i++)
+                                            <input type="file" id="downloads"
+                                                   class="form-control mb-2"
+                                                   wire:change="$emit('file_upload_start')">
+                                        @endfor
+                                    </div>
+                                    <div class="form-group">
+                                        <a class="btn btn-primary" href="#" wire:click.prevent="handleAddField">Add
+                                            file</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    @if (isset($event->downloads))
+                                        <ul>
+                                            @foreach($event->downloads as $download)
+                                                <li>
+                                                    <a href="{{Storage::url($download->path)}}">{{$download->filename}}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </div>
+                            </div>
                             <button class="btn btn-success mr-4">Save</button>
                             <a href="{{route('home')}}">Back</a>
                         </form>

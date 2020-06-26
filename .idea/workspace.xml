@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fbc0b21-17e2-43b0-8b8d-21018751aca7" name="Default Changelist" comment="" />
+    <list default="true" id="9fbc0b21-17e2-43b0-8b8d-21018751aca7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Services/FileHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EventAddForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EventAddForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/event-add-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/event-add-form.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,6 +141,11 @@
       <path value="$PROJECT_DIR$/vendor/laravel/framework" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1c2qRdMqEnQGbOdZYLwucd5Q6lq" />
@@ -120,6 +155,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -131,7 +167,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Services" />
+      <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -160,6 +202,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="768" y="300" width="424" height="520" key="FileChooserDialogImpl" timestamp="1591498336238">
       <screen x="50" y="27" width="1870" height="1053" />
@@ -169,21 +225,28 @@
       <screen x="50" y="27" width="1870" height="1053" />
     </state>
     <state x="839" y="487" width="281" height="139" key="Laravel.ExtractPartialViewDialog/50.27.1870.1053@50.27.1870.1053" timestamp="1591499560239" />
+    <state x="369" y="144" key="NewPhpClassDialog" timestamp="1593181622447">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="369" y="144" key="NewPhpClassDialog/0.23.1280.777@0.23.1280.777" timestamp="1593181622447" />
     <state x="780" y="479" width="399" height="156" key="NewPhpFileDialog" timestamp="1591499078365">
       <screen x="50" y="27" width="1870" height="1053" />
     </state>
     <state x="780" y="479" width="399" height="156" key="NewPhpFileDialog/50.27.1870.1053@50.27.1870.1053" timestamp="1591499078365" />
-    <state x="677" y="150" width="1022" height="737" key="SettingsEditor" timestamp="1591498416784">
-      <screen x="50" y="27" width="1870" height="1053" />
+    <state x="380" y="78" width="900" height="722" key="SettingsEditor" timestamp="1593191127557">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
+    <state x="380" y="78" width="900" height="722" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1593191127557" />
     <state x="677" y="150" width="1022" height="737" key="SettingsEditor/50.27.1870.1053@50.27.1870.1053" timestamp="1591498416784" />
-    <state width="553" height="446" key="SwitcherDM" timestamp="1590078531171">
-      <screen x="58" y="27" width="1862" height="1053" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1593186089002">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
+    <state width="500" height="400" key="SwitcherDM/0.23.1280.777@0.23.1280.777" timestamp="1593186089002" />
     <state width="553" height="446" key="SwitcherDM/58.27.1862.1053@58.27.1862.1053" timestamp="1590078531171" />
-    <state x="647" y="259" width="675" height="678" key="search.everywhere.popup" timestamp="1591377429592">
-      <screen x="50" y="27" width="1870" height="1053" />
+    <state x="409" y="194" width="670" height="501" key="search.everywhere.popup" timestamp="1593191057775">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
+    <state x="409" y="194" width="670" height="501" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1593191057775" />
     <state x="647" y="259" width="675" height="678" key="search.everywhere.popup/50.27.1870.1053@50.27.1870.1053" timestamp="1591377429592" />
     <state x="652" y="259" width="672" height="678" key="search.everywhere.popup/58.27.1862.1053@58.27.1862.1053" timestamp="1590078081861" />
   </component>

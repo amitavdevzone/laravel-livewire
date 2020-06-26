@@ -13,4 +13,9 @@ class Event extends Model
         return $this->hasMany(Registration::class)
             ->orderByDesc('id');
     }
+
+    public function downloads()
+    {
+        return $this->hasMany(Download::class);
+    }
 }
